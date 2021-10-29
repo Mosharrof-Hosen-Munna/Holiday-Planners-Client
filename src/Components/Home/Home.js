@@ -1,7 +1,12 @@
 import React from "react";
+import Cover from "./Cover/Cover";
 
 const Home = () => {
-  return <div>THis is home</div>;
+  return (
+    <>
+      <Cover></Cover>
+    </>
+  );
 };
 
 export default Home;
