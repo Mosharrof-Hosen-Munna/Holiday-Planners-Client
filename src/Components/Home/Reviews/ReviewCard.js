@@ -6,14 +6,14 @@ const ReviewCard = () => {
   return (
     <Col className="mb-5 mb-lg-0">
       <Card className="shadow border-0 rounded-3">
-        <div className="text-center mt-5">
+        <div className="text-center mt-4 mt-lg-5">
           <FontAwesomeIcon className="fa-1x text-warning me-3" icon={faStar} />
           <FontAwesomeIcon className="fa-1x text-warning me-3" icon={faStar} />
           <FontAwesomeIcon className="fa-1x text-warning me-3" icon={faStar} />
           <FontAwesomeIcon className="fa-1x text-warning me-3" icon={faStar} />
           <FontAwesomeIcon className="fa-1x text-warning" icon={faStar} />
         </div>
-        <Card.Body className="p-5 position-relative">
+        <Card.Body className="p-3 p-lg-5 position-relative">
           <Card.Text className="text-center">
             Lorem ipsum dolor amet consectet adipiscing sed do eiusmod tempor
             incididunt labore et dolore magna aliqua ipsum suspen disse ultrices

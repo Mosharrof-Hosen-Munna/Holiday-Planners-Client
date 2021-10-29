@@ -6,7 +6,7 @@ const Cover = () => {
   return (
     <section className="py-5 ">
       <Container>
-        <Row lg={2} xs={1} className="g-4">
+        <Row lg={2} xs={1} className="g-5">
           <Col>
             <h1 className="text-orange fw-bold" style={{ fontSize: "50px" }}>
               World Best Travel Agency Company Since{" "}

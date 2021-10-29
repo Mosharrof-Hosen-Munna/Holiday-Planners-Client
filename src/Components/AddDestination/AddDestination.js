@@ -129,7 +129,7 @@ const AddDestination = () => {
             <Form.Group className="mb-3" controlId="time">
               <Form.Label>Travel Starting Time</Form.Label>
               <Form.Control
-                type="number"
+                type="date"
                 ref={startingTimeRef}
                 placeholder="Travel Starting Time"
                 required

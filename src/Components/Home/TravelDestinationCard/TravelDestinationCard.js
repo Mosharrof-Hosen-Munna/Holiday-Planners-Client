@@ -1,27 +1,47 @@
 import React from "react";
 import { Card, Button, Col, Row } from "react-bootstrap";
-import travelImage from "../../../images/cover.jpg";
+
 import "./TravelDestinationCard.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faUsers } from "@fortawesome/free-solid-svg-icons";
-const TravelDestinationCard = () => {
+import { useHistory } from "react-router";
+const TravelDestinationCard = (props) => {
+  const {
+    _id,
+    travelPlace,
+    destinationTitle,
+    destinationDesc,
+    travelDuration,
+    groupSize,
+    bookingPrice,
+    destinationUrl,
+    travelTime,
+  } = props.destination;
+  const history = useHistory();
+
+  const handleBookingButton = () => {
+    history.push(`/destination/booking/${_id}`);
+  };
+
   return (
     <Col>
-      <Card className="p-0 border-0 shadow">
-        <Card.Img variant="top" className="img-fluid" src={travelImage} />
+      <Card className="p-0 h-100 border-0 shadow">
+        <Card.Img
+          style={{ height: "250px" }}
+          variant="top"
+          className="img-fluid"
+          src={destinationUrl}
+        />
         <Card.Body className="position-relative">
           <h6 className="travel-destination-name bg-warning text-white fw-bold py-2 px-3 ms-1 rounded">
-            America
+            {travelPlace}
           </h6>
-          <Card.Title className="fs-5 ">
-            Holiday Planners is a World Leading Online Tour Booking Platform
-          </Card.Title>
+          <Card.Title className="fs-5 ">{destinationTitle}</Card.Title>
           <Card.Text className="text-secondary">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+            {destinationDesc.slice(0, 100)}
           </Card.Text>
-          <hr />
-          <Row>
+          <Row className="mt-auto">
+            <hr />
             <Col>
               <div className="d-flex align-items-center ">
                 <FontAwesomeIcon
@@ -30,7 +50,7 @@ const TravelDestinationCard = () => {
                 />
                 <div>
                   <div>Duration</div>
-                  <div className="text-secondary">9 Days 10 hours</div>
+                  <div className="text-secondary">{travelDuration}</div>
                 </div>
               </div>
             </Col>
@@ -42,7 +62,7 @@ const TravelDestinationCard = () => {
                 />
                 <div>
                   <div>Group Size</div>
-                  <div className="text-secondary">10 Peoples</div>
+                  <div className="text-secondary">{groupSize}Peoples</div>
                 </div>
               </div>
             </Col>
@@ -51,8 +71,10 @@ const TravelDestinationCard = () => {
 
         <Card.Footer>
           <div className="d-flex align-items-center justify-content-between">
-            <h3 className="text-danger fw-bold">$525</h3>
-            <Button variant="success">BOOK NOW</Button>
+            <h3 className="text-danger fw-bold">$ {bookingPrice}</h3>
+            <Button onClick={handleBookingButton} variant="success">
+              BOOK NOW
+            </Button>
           </div>
         </Card.Footer>
       </Card>
