@@ -15,3 +15,7 @@ code {
 .text-orange {
   color: orangered;
 }
+
+.text-justify {
+  text-align: justify;
+}
