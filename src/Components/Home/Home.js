@@ -1,5 +1,6 @@
 import React from "react";
 import Cover from "./Cover/Cover";
+import Reviews from "./Reviews/Reviews";
 import TravelDestination from "./TravelDestination/TravelDestination";
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
     <>
       <Cover></Cover>
       <TravelDestination></TravelDestination>
+      <Reviews></Reviews>
     </>
   );
 };

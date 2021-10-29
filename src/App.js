@@ -10,6 +10,7 @@ import Register from "./Components/Register/Register";
 import PrivateRoute, {
   AuthenticationPrivateRoute,
 } from "./Components/PrivateRoute/PrivateRoute";
+import AddDestination from "./Components/AddDestination/AddDestination";
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
           <Route path="/account/register">
             <Register></Register>
           </Route>
+          <PrivateRoute path="/create/destination">
+            <AddDestination></AddDestination>
+          </PrivateRoute>
           <Route path="*">
             <NotFound></NotFound>
           </Route>

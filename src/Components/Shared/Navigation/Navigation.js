@@ -49,9 +49,9 @@ const Navigation = () => {
                 exact
                 activeClassName="text-info"
                 className="nav-link"
-                to="/contact"
+                to="/create/destination"
               >
-                CONTACT
+                ADD DESTINATION
               </NavLink>
             </Nav>
 

@@ -129,7 +129,7 @@ const Login = () => {
                 </Col>
               </Row>
               <div className="text-center mt-3">
-                Don't have an account?{" "}
+                Don't have an account?
                 <Link to="/account/register">Register</Link>
               </div>
             </div>
