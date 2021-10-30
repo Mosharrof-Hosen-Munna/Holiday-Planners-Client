@@ -21,3 +21,16 @@ code {
 .text-justify {
   text-align: justify;
 }
+.object-cover {
+  object-fit: cover;
+}
+
+.bg-orange {
+  background-color: orangered;
+}
+.btn-orange {
+  background-color: orangered;
+}
+.cursor-pointer {
+  cursor: pointer;
+}

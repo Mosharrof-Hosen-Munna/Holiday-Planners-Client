@@ -12,6 +12,8 @@ import PrivateRoute, {
 } from "./Components/PrivateRoute/PrivateRoute";
 import AddDestination from "./Components/AddDestination/AddDestination";
 import BookingTravel from "./Components/BookingTravel/BookingTravel";
+import MyOrders from "./Components/MyOrders/MyOrders";
+import ManageOrders from "./Components/ManageOrders/ManageOrders";
 
 function App() {
   return (
@@ -36,6 +38,12 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path="/destination/booking/:id">
             <BookingTravel></BookingTravel>
+          </PrivateRoute>
+          <PrivateRoute path="/myOrders">
+            <MyOrders></MyOrders>
+          </PrivateRoute>
+          <PrivateRoute path="/booking-order/all">
+            <ManageOrders></ManageOrders>
           </PrivateRoute>
           <Route path="*">
             <NotFound></NotFound>
