@@ -16,7 +16,8 @@ const OrderOverview = (props) => {
     <section className="bg-primary py-4">
       <Container>
         <h1 className="text-white mb-4">
-          Hi, {user.displayName.split(" ")[0]} Welcome Back!
+          Hi, {user.displayName ? user.displayName.split(" ")[0] : "Mr/Ms"}
+          Welcome Back!
         </h1>
         <Batch></Batch>
       </Container>
