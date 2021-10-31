@@ -48,7 +48,14 @@ const MyOrders = () => {
       </div>
       <Container className="my-5">
         {orders.length > 0 ? (
-          <Table className="rounded-3" striped bordered hover variant="dark">
+          <Table
+            responsive
+            className="rounded-3"
+            striped
+            bordered
+            hover
+            variant="dark"
+          >
             <thead>
               <tr>
                 <th>Author</th>

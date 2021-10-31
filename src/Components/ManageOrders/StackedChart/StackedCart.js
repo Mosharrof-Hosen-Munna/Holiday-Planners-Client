@@ -56,10 +56,10 @@ const data = [
 
 export default function StackedCart() {
   return (
-    <Container>
+    <Container className="text-center d-flex justify-content-center">
       <AreaChart
-        width={900}
-        height={600}
+        width={350}
+        height={300}
         data={data}
         margin={{
           top: 10,
