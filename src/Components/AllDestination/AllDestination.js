@@ -1,15 +1,15 @@
+import React from "react";
 import { Container, Row } from "react-bootstrap";
-import useDestinations from "../../../Hooks/useDestinations";
-import DestinationSkeleton from "../DestinationSkeleton/DestinationSkeleton";
+import useDestinations from "../../Hooks/useDestinations";
+import DestinationSkeleton from "../Home/DestinationSkeleton/DestinationSkeleton";
+import TravelDestinationCard from "../Home/TravelDestinationCard/TravelDestinationCard";
 
-import TravelDestinationCard from "../TravelDestinationCard/TravelDestinationCard";
-
-const TravelDestination = () => {
+const AllDestination = () => {
   const [destinations, setDestinations, loading] = useDestinations();
   if (loading) {
     return (
       <>
-        <div className="text-center py-5">
+        <div className="text-center">
           <h1 className="text-orange">Amazing Tours</h1>
           <p className="text-secondary w-75 mx-auto">
             Far far away, behind the word mountains, far from the countries
@@ -22,8 +22,9 @@ const TravelDestination = () => {
     );
   }
   return (
-    <section className="py-5 bg-light">
+    <section className="py-5 bg-white">
       <Container>
+        {/* <DestinationSkeleton></DestinationSkeleton> */}
         <div className="text-center">
           <h1 className="text-orange">Amazing Tours</h1>
           <p className="text-secondary w-75 mx-auto">
@@ -34,7 +35,7 @@ const TravelDestination = () => {
         </div>
         {destinations && (
           <Row lg={3} md={2} xs={1} className="g-4 py-4">
-            {destinations.slice(0, 6).map((destination) => (
+            {destinations.map((destination) => (
               <TravelDestinationCard
                 destination={destination}
               ></TravelDestinationCard>
@@ -46,4 +47,4 @@ const TravelDestination = () => {
   );
 };
 
-export default TravelDestination;
+export default AllDestination;

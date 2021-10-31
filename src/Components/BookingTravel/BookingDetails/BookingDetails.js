@@ -1,5 +1,4 @@
 import React from "react";
-import { Container } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faClock,
@@ -7,17 +6,7 @@ import {
   faAddressBook,
 } from "@fortawesome/free-solid-svg-icons";
 const BookingDetails = (props) => {
-  const {
-    _id,
-    travelPlace,
-    destinationTitle,
-    destinationDesc,
-    travelDuration,
-    groupSize,
-    bookingPrice,
-    destinationUrl,
-    travelTime,
-  } = props.destination;
+  const { travelPlace, destinationDesc, travelDuration } = props.destination;
   return (
     <div className="py-5">
       <h1 className="text-orange mb-5">Overview</h1>

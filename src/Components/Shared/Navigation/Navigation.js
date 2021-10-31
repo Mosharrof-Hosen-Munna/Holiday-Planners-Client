@@ -42,26 +42,21 @@ const Navigation = () => {
                 exact
                 activeClassName="text-info"
                 className="nav-link"
-                to="/about"
+                to="/destinations/all"
               >
-                ABOUT US
+                ALL DESTINATIONS
               </NavLink>
-              <NavLink
-                exact
-                activeClassName="text-info"
-                className="nav-link"
-                to="/services"
-              >
-                SERVICES
-              </NavLink>
-              <NavLink
-                exact
-                activeClassName="text-info"
-                className="nav-link"
-                to="/create/destination"
-              >
-                ADD DESTINATION
-              </NavLink>
+
+              {user && (
+                <NavLink
+                  exact
+                  activeClassName="text-info"
+                  className="nav-link"
+                  to="/create/destination"
+                >
+                  ADD DESTINATION
+                </NavLink>
+              )}
             </Nav>
 
             {!user && (

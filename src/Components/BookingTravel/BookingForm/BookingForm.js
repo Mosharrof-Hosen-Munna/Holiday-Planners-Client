@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useRef } from "react";
-import { Form, Button, Container, Card } from "react-bootstrap";
+import { Form, Button, Card } from "react-bootstrap";
+import { useHistory } from "react-router";
 import useAuth from "../../../Hooks/useAuth";
 
 const BookingForm = ({ destination }) => {
@@ -11,6 +12,7 @@ const BookingForm = ({ destination }) => {
   const phoneRef = useRef();
 
   const { user } = useAuth();
+  const history = useHistory();
 
   const handleBooking = (e) => {
     e.preventDefault();
@@ -40,10 +42,12 @@ const BookingForm = ({ destination }) => {
         if (res.data.insertedId) {
           alert("Successfully Placed your booking order");
           e.target.reset();
+          history.push(`/order/review/${res.data.insertedId}`);
         }
       });
   };
-  console.log(user);
+
+  const emailChange = () => {};
 
   return (
     <section className="my-5 h-100 position-relative">
@@ -64,6 +68,7 @@ const BookingForm = ({ destination }) => {
               value={user.email}
               placeholder="Email"
               required
+              onChange={emailChange}
               disabled={user.email}
             />
           </Form.Group>

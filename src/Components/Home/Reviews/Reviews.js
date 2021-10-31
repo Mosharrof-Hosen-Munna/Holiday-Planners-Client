@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { Container, Row } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+
 import ReviewCard from "./ReviewCard";
 const Reviews = () => {
+  const [reviews, setReviews] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/api/review/all")
+      .then((res) => setReviews(res.data))
+      .catch((err) => console.log(err));
+  }, []);
+
   return (
     <section className="py-5 bg-light border-top border-success border-5">
       <Container>
@@ -14,9 +23,9 @@ const Reviews = () => {
           </h1>
         </div>
         <Row lg={3} md={2} xs={1} className="g-4 py-5">
-          <ReviewCard></ReviewCard>
-          <ReviewCard></ReviewCard>
-          <ReviewCard></ReviewCard>
+          {reviews.slice(0, 3).map((review) => (
+            <ReviewCard review={review}></ReviewCard>
+          ))}
         </Row>
       </Container>
     </section>

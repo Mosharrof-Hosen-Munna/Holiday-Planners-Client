@@ -111,7 +111,7 @@ const FAQ = () => {
                     className="w-100 mx-auto"
                     type="submit"
                   >
-                    Book Tour
+                    Submit
                   </Button>
                 </div>
               </Form>

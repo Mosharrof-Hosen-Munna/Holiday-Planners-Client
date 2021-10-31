@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import coverImage from "../../../images/cover.jpg";
 
 const Cover = () => {
@@ -13,13 +14,16 @@ const Cover = () => {
               <span className="text-success">2008.</span>
             </h1>
             <p className="my-5 text-secondary lh-lg">
-              Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiu
-              smod tempor incididunt ut labore eiu dolore magna aliqua.Quis
-              ipsum suspen disse ultrices gravida Risus commodo.
+              Valley of Clouds The trip will start from Dhaka. Breakfast will be
+              served at a local restaurant in Khagrachori town. After breakfast,
+              our guide will pick you up with a 4x4 Land Cruiser or Chander
+              Gari.
             </p>
-            <Button variant="success" size="lg" className="w-50">
-              Find Now
-            </Button>
+            <Link to="/destinations/all">
+              <Button variant="success" size="lg" className="w-50">
+                Find Now
+              </Button>
+            </Link>
           </Col>
           <Col>
             <div className="shadow rounded-3 ">

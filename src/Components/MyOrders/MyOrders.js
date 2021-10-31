@@ -26,7 +26,6 @@ const MyOrders = () => {
       axios
         .put(`http://localhost:5000/api/order/cancel/${id}`)
         .then((res) => {
-          console.log(res);
           if (res.data.modifiedCount > 0) {
             setLoad(!load);
           }
@@ -36,7 +35,7 @@ const MyOrders = () => {
   };
 
   return (
-    <section>
+    <section style={{ minHeight: "800px" }}>
       <div className="bg-primary py-5">
         <Container>
           <h1 className="text-white mb-4">My Booking</h1>

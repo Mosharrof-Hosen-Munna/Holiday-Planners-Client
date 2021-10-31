@@ -14,6 +14,8 @@ import AddDestination from "./Components/AddDestination/AddDestination";
 import BookingTravel from "./Components/BookingTravel/BookingTravel";
 import MyOrders from "./Components/MyOrders/MyOrders";
 import ManageOrders from "./Components/ManageOrders/ManageOrders";
+import AllDestination from "./Components/AllDestination/AllDestination";
+import OrderReview from "./Components/OrderReview/OrderReview";
 
 function App() {
   return (
@@ -45,6 +47,12 @@ function App() {
           <PrivateRoute path="/booking-order/all">
             <ManageOrders></ManageOrders>
           </PrivateRoute>
+          <PrivateRoute path="/order/review/:id">
+            <OrderReview></OrderReview>
+          </PrivateRoute>
+          <Route path="/destinations/all">
+            <AllDestination></AllDestination>
+          </Route>
           <Route path="*">
             <NotFound></NotFound>
           </Route>

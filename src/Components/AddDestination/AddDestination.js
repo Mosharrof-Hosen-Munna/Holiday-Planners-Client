@@ -38,13 +38,11 @@ const AddDestination = () => {
     axios
       .post("http://localhost:5000/create/travelDestinations", newDestination)
       .then((res) => {
-        console.log(res);
         if (res.data.insertedId) {
           alert("Successfully added a new destination");
           e.target.reset();
         }
       });
-    console.log(newDestination);
   };
 
   return (
@@ -148,18 +146,3 @@ const AddDestination = () => {
 };
 
 export default AddDestination;
-
-const data = {
-  travelPlace: "Bangladesh",
-  destinationTitle:
-    "Holiday Planners is a World Leading Online Tour Booking Platform",
-  destinationDesc:
-    "Holiday Planners is a World Leading Online Tour Booking Platform",
-  travelDuration: "6 hours 50 minutes",
-  groupSize: "10 peoples",
-  bookingPrice: 500,
-  destinationUrl:
-    "Holiday Planners is a World Leading Online Tour Booking Platform",
-  peopleLeft: 2,
-  travelTime: "20 January 2022",
-};

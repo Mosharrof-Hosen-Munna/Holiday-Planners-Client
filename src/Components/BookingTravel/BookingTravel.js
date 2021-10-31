@@ -44,20 +44,3 @@ const BookingTravel = () => {
 };
 
 export default BookingTravel;
-
-const BookingData = {
-  // name: "munna",
-  // email: "mdsaf@gmail.com",
-  // phone: "164631121",
-  // paymentMethod: "Cash On Delivery",
-  // message: "sadfasdfasdf",
-  // status: 'pending'
-  // author: {
-  //   uid:user.uid,
-  //   name: user.displayName,
-  //   email: user.email ? user.email : "Not/Available",
-  //   photoUrl: user.photoURL
-  //     ? user.photoURL
-  //     : "https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png",
-  // },
-};

@@ -15,7 +15,6 @@ const TravelDestinationCard = (props) => {
     groupSize,
     bookingPrice,
     destinationUrl,
-    travelTime,
   } = props.destination;
   const history = useHistory();
 

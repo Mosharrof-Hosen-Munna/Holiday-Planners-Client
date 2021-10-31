@@ -7,13 +7,14 @@ import StackedChart from "./StackedChart/StackedCart";
 const ManageOrders = () => {
   const [orders, setOrders] = useState([]);
   const [update, setUpdate] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     axios
       .get(`http://localhost:5000/api/bookingOrder/all`)
       .then((res) => {
         setOrders(res.data);
-        console.log(res.data);
+        setLoading(false);
       })
       .catch((err) => console.log(err));
   }, [update]);
@@ -47,7 +48,7 @@ const ManageOrders = () => {
   };
 
   return (
-    <section>
+    <section style={{ minHeight: "800px" }}>
       <OrderOverview></OrderOverview>
       <Container className="my-5">
         {orders.length > 0 ? (
@@ -80,7 +81,7 @@ const ManageOrders = () => {
                   </td>
                   <td>{order.email}</td>
                   <td>{order.place}</td>
-                  <td>{order.price}</td>
+                  <td>$ {order.price}</td>
                   <td>{order.date}</td>
                   <td>
                     <div
