@@ -34,3 +34,11 @@ code {
 .cursor-pointer {
   cursor: pointer;
 }
+.profile-card {
+  right: 0px;
+}
+@media (max-width: 1023px) {
+  .profile-card {
+    left: 0px;
+  }
+}

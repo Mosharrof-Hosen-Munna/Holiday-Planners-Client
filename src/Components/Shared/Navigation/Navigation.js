@@ -27,9 +27,9 @@ const Navigation = () => {
       <Navbar bg="light" expand="lg">
         <Container>
           <img className="img-fluid" src={logo} alt="" />
-          <Navbar.Toggle aria-controls="basic-navbar-nav" className="ms-auto" />
+          <Navbar.Toggle aria-controls="basic-navbar-nav" className="me-auto" />
           <Navbar.Collapse id="basic-navbar-nav ">
-            <Nav className=" fw-bold">
+            <Nav className="ms-auto fw-bold">
               <NavLink
                 exact
                 activeClassName="text-info"
@@ -78,7 +78,7 @@ const Navigation = () => {
                   <img
                     onClick={() => setIsOpen(!isOpen)}
                     width="50px"
-                    className="rounded-circle cursor-pointer"
+                    className="rounded-circle  cursor-pointer"
                     src={
                       user.photoURL
                         ? user.photoURL
@@ -87,13 +87,12 @@ const Navigation = () => {
                     alt=""
                   />
                   <Card
-                    className={`border-0 pt-4 shadow position-absolute ${
+                    className={`border-0 profile-card pt-4 shadow position-absolute ${
                       isOpen ? "d-block" : "d-none"
                     }`}
                     style={{
                       zIndex: "2",
                       width: "280px",
-                      right: "0px",
                       top: "60px",
                     }}
                   >
