@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Container, Table } from "react-bootstrap";
+import OrderOverview from "./OrderOverview/OrderOverview";
+import StackedChart from "./StackedChart/StackedCart";
 
 const ManageOrders = () => {
   const [orders, setOrders] = useState([]);
@@ -46,11 +48,7 @@ const ManageOrders = () => {
 
   return (
     <section>
-      <div className="bg-primary py-5">
-        <Container>
-          <h1 className="text-white">My Booking</h1>
-        </Container>
-      </div>
+      <OrderOverview></OrderOverview>
       <Container className="my-5">
         {orders.length > 0 ? (
           <Table className="rounded-3" striped bordered hover variant="dark">
@@ -98,6 +96,10 @@ const ManageOrders = () => {
                       <button
                         onClick={() => handleApproved(order._id)}
                         className="btn btn-sm btn-primary "
+                        disabled={
+                          order.status === "Cancelled" ||
+                          order.status === "Approved"
+                        }
                       >
                         Approved
                       </button>
@@ -119,6 +121,7 @@ const ManageOrders = () => {
           </h1>
         )}
       </Container>
+      <StackedChart></StackedChart>
     </section>
   );
 };

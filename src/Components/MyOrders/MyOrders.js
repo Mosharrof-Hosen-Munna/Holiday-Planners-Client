@@ -2,6 +2,8 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Container, Table } from "react-bootstrap";
 import useAuth from "../../Hooks/useAuth";
+import { Batch } from "../ManageOrders/OrderOverview/OrderOverview";
+import StackedChart from "../ManageOrders/StackedChart/StackedCart";
 
 const MyOrders = () => {
   const [orders, setOrders] = useState([]);
@@ -37,7 +39,8 @@ const MyOrders = () => {
     <section>
       <div className="bg-primary py-5">
         <Container>
-          <h1 className="text-white">My Booking</h1>
+          <h1 className="text-white mb-4">My Booking</h1>
+          <Batch></Batch>
         </Container>
       </div>
       <Container className="my-5">
@@ -91,7 +94,10 @@ const MyOrders = () => {
                       <button
                         onClick={() => handleCancel(order._id)}
                         className="btn btn-primary w-75"
-                        disabled={order.status === "Cancelled" || "Approved"}
+                        disabled={
+                          order.status === "Cancelled" ||
+                          order.status === "Approved"
+                        }
                       >
                         Cancel
                       </button>
@@ -107,6 +113,8 @@ const MyOrders = () => {
           </h1>
         )}
       </Container>
+
+      <StackedChart></StackedChart>
     </section>
   );
 };
