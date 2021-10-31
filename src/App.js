@@ -32,9 +32,9 @@ function App() {
           <AuthenticationPrivateRoute path="/account/login">
             <Login></Login>
           </AuthenticationPrivateRoute>
-          <Route path="/account/register">
+          <AuthenticationPrivateRoute path="/account/register">
             <Register></Register>
-          </Route>
+          </AuthenticationPrivateRoute>
           <PrivateRoute path="/create/destination">
             <AddDestination></AddDestination>
           </PrivateRoute>
