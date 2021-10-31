@@ -9,7 +9,7 @@ import {
   faPlaneArrival,
 } from "@fortawesome/free-solid-svg-icons";
 
-const OrderOverview = () => {
+const OrderOverview = (props) => {
   const { user } = useAuth();
 
   return (

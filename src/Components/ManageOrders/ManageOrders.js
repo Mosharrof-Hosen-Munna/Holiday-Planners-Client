@@ -11,7 +11,7 @@ const ManageOrders = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/bookingOrder/all`)
+      .get(`https://aqueous-fortress-86306.herokuapp.com/api/bookingOrder/all`)
       .then((res) => {
         setOrders(res.data);
         setLoading(false);
@@ -23,7 +23,9 @@ const ManageOrders = () => {
     const isDelete = window.confirm("Are you sure for Delete your this order?");
     if (isDelete) {
       axios
-        .delete(`http://localhost:5000/api/order/delete/${id}`)
+        .delete(
+          `https://aqueous-fortress-86306.herokuapp.com/api/order/delete/${id}`
+        )
         .then((res) => {
           console.log(res);
           if (res.data.deletedCount > 0) {
@@ -37,7 +39,9 @@ const ManageOrders = () => {
 
   const handleApproved = (id) => {
     axios
-      .put(`http://localhost:5000/api/order/update/status/${id}`)
+      .put(
+        `https://aqueous-fortress-86306.herokuapp.com/api/order/update/status/${id}`
+      )
       .then((res) => {
         console.log(res);
         if (res.data.modifiedCount > 0) {

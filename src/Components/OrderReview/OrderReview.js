@@ -24,7 +24,9 @@ const OrderReview = () => {
   const history = useHistory();
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/booking/order/${id}`)
+      .get(
+        `https://aqueous-fortress-86306.herokuapp.com/api/booking/order/${id}`
+      )
       .then((res) => setOrder(res.data))
       .catch((err) => console.log(err));
   }, []);
@@ -46,7 +48,10 @@ const OrderReview = () => {
     };
 
     axios
-      .post(`http://localhost:5000/api/review/create`, reviewData)
+      .post(
+        `https://aqueous-fortress-86306.herokuapp.com/api/review/create`,
+        reviewData
+      )
       .then((res) => {
         if (res.data.insertedId) {
           history.push("/myOrders");

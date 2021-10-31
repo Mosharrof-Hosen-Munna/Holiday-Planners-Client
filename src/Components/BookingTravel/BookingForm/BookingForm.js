@@ -36,7 +36,10 @@ const BookingForm = ({ destination }) => {
     };
 
     axios
-      .post("http://localhost:5000/api/booking/newOrder", bookingData)
+      .post(
+        "https://aqueous-fortress-86306.herokuapp.com/api/booking/newOrder",
+        bookingData
+      )
       .then((res) => {
         console.log(res.data);
         if (res.data.insertedId) {

@@ -7,7 +7,7 @@ const useDestinations = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/travelDestination/all")
+      .get("https://aqueous-fortress-86306.herokuapp.com/travelDestination/all")
       .then((res) => {
         setDestinations(res.data);
         setLoading(false);

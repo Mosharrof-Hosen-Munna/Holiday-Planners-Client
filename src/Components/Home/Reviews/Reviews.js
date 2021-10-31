@@ -8,7 +8,7 @@ const Reviews = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/review/all")
+      .get("https://aqueous-fortress-86306.herokuapp.com/api/review/all")
       .then((res) => setReviews(res.data))
       .catch((err) => console.log(err));
   }, []);

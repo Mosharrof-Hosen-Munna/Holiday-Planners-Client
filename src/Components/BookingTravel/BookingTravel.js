@@ -13,7 +13,9 @@ const BookingTravel = () => {
   const { id } = useParams();
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/travelDestination/${id}`)
+      .get(
+        `https://aqueous-fortress-86306.herokuapp.com/travelDestination/${id}`
+      )
       .then((res) => setDestination(res.data))
       .catch((err) => console.log(err));
   }, [id]);

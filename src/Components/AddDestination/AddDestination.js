@@ -36,7 +36,10 @@ const AddDestination = () => {
     };
 
     axios
-      .post("http://localhost:5000/create/travelDestinations", newDestination)
+      .post(
+        "https://aqueous-fortress-86306.herokuapp.com/create/travelDestinations",
+        newDestination
+      )
       .then((res) => {
         if (res.data.insertedId) {
           alert("Successfully added a new destination");

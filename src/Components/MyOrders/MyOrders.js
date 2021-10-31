@@ -13,7 +13,9 @@ const MyOrders = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/bookingOrders/${user.uid}`)
+      .get(
+        `https://aqueous-fortress-86306.herokuapp.com/api/bookingOrders/${user.uid}`
+      )
       .then((res) => {
         setOrders(res.data);
       })
@@ -24,7 +26,9 @@ const MyOrders = () => {
     const isCancel = window.confirm("Are you sure for cancel your this order?");
     if (isCancel) {
       axios
-        .put(`http://localhost:5000/api/order/cancel/${id}`)
+        .put(
+          `https://aqueous-fortress-86306.herokuapp.com/api/order/cancel/${id}`
+        )
         .then((res) => {
           if (res.data.modifiedCount > 0) {
             setLoad(!load);
