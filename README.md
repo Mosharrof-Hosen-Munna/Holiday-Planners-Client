@@ -25,7 +25,7 @@ _Our goal is to provide eduction to everyone in every sector_
 
 > Clone the application front End from github using this link:
 
-- [x] https://github.com/programming-hero-web-course1/tourism-or-delivery-website-client-side-Mosharrof-Hosen-Munna
+- [x] https://github.com/Mosharrof-Hosen-Munna/Holiday-Planners-Client
 
 ## Website link
 
@@ -33,7 +33,7 @@ _Our goal is to provide eduction to everyone in every sector_
 
 ## backend Github Code link
 
--[x] https://github.com/programming-hero-web-course1/tourism-or-delivery-website-server-side-Mosharrof-Hosen-Munna
+-[x] https://github.com/Mosharrof-Hosen-Munna/SmartFury-server
 
 > From the project directory run: -
 
